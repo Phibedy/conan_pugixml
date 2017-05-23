@@ -7,8 +7,8 @@ from conans import CMake
 
 class PugiConan(ConanFile):
     name = "pugixml"
-    ZIP_FOLDER_NAME = "pugixml-1.7"
-    version = "1.7"
+    ZIP_FOLDER_NAME = "pugixml-1.8"
+    version = "1.8"
     settings = "os", "arch", "compiler", "build_type"
     options = {"shared": [True, False]}
     default_options = "shared=True"
@@ -18,7 +18,7 @@ class PugiConan(ConanFile):
 
     def source(self):
         zip_name = "%s.zip" % self.ZIP_FOLDER_NAME
-        url = "https://github.com/zeux/pugixml/releases/download/v1.7/pugixml-1.7.zip"
+        url = "https://github.com/zeux/pugixml/releases/download/v1.8/pugixml-1.8.zip"
         download(url, zip_name)
         unzip(zip_name)
         os.unlink(zip_name)
